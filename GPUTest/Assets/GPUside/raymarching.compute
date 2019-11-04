@@ -1,0 +1,140 @@
+﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+RWTexture2D<float4> Result;
+float4x4 cameraToProjectionInverse;
+float4x4 cameraToWorld;
+float4 directionalLight;
+struct Ray
+{
+	float3 rayorigin; // gốc tọa độ của tia
+	float3 direction;// hướng của tia
+	float maxDistance;// khoảng cách xa nhất cho phép tracing.
+};
+struct Hit
+{
+	float3 position;
+	float3 color;
+	float3 normal;
+	float distance;
+};
+
+
+Ray CreateCameraRay(float2 uv)
+{
+	Ray ray;
+	ray.rayorigin = mul(cameraToWorld,float4(0, 0, 0, 1) ).xyz;
+	float3 direction = mul(cameraToProjectionInverse,float4(uv.x, uv.y, 0, 1)).xyz;
+	ray.direction = normalize( mul(cameraToWorld,float4(direction,0.0)).xyz);
+	ray.maxDistance = 5000;
+	return ray;
+}
+void IntersectGroundPlane(Ray ray, inout Hit bestHit)
+{
+	// Calculate distance along the ray where the ground plane is intersected
+	float t = -ray.rayorigin.y / ray.direction.y;
+	if (t > 0 && t < bestHit.distance)
+	{
+		bestHit.distance = t;
+		bestHit.position = ray.rayorigin + t * ray.direction;
+		bestHit.normal = float3(0.0f, 1.0f, 0.0f);
+		bestHit.color =float3(0.3,0.3,0.3);
+	
+	}
+}
+
+float sdSphere(float3 p,float r)
+{
+	return length(p) - r;
+}
+float sdTorus(float3 p, float2 t)
+{
+	float2 q = float2(length(p.xz) - t.x, p.y);
+	return length(q) - t.y;
+}
+float sdPlane(float3 p, float4 n)
+{
+	// n must be normalized
+	return dot(p, n.xyz) + n.w;
+}
+float sdRoundBox(float3 p, float3 b, float r)
+{
+	float3 q = abs(p) - b;
+	return length(max(q, 0.0)) + min(max(q.x, max(q.y, q.z)), 0.0) - r;
+}
+float map(float3 p)
+{
+	float d = sdSphere(p, 2);
+	
+	 d = min(d, sdTorus(p + float3(10, 0, 0), float2(3, 1)));
+	 d = min(d, sdRoundBox(p+float3(-10, 0, 0), float3(3,3,3),2.0f));
+	return d;
+}
+
+
+
+float3 calNormal(float3 pos)
+{
+	const float2 eps = float2(0.001f, 0.0f);
+	float3 nor = float3(
+		map(pos + eps.xyy) - map(pos - eps.xyy),
+		map(pos + eps.yxy) - map(pos - eps.yxy),
+		map(pos + eps.yyx)-  map(pos - eps.yyx));
+	return normalize(nor);
+}
+void raymarch(Ray ray, inout Hit hit)
+{
+	float4 color = float4(0.0f, 0.0f, 0.0f, 1.0f);
+	const int maxstep = 64;
+	float t = 0; // current distance traveled along ray
+	for (int i = 0; i < maxstep; ++i) {
+		float3 p = ray.rayorigin + ray.direction * t; // World space position of sample
+		float d = map(p);
+		if (d < 0.0001f) {
+
+			hit.distance = t;		
+			hit.color = float3(1, 1, 1);
+			hit.position = p;
+			hit.normal = calNormal(p);
+			break;
+		}		
+		t += d;
+	}
+
+}
+Hit CreateHit()
+{
+	Hit hit;
+	hit.color = float3(0, 0, 0);
+	hit.distance = 5000;
+	hit.position = float3(0, 0, 0);
+	return hit;
+}
+
+[numthreads(8,8,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    // TODO: insert actual code here!
+	uint width, height;
+	Result.GetDimensions(width, height);
+	// convert to range[-1,1]
+	float2 uv = float2((id.xy) / float2(width, height) * 2.0f - 1.0f);
+
+	// create  a new ray
+	Ray ray = CreateCameraRay(uv);
+	// create hit
+	Hit hit = CreateHit();
+	IntersectGroundPlane(ray, hit);
+	// do raymarching
+	raymarch(ray, hit);
+
+	
+//	 calculate diffuse light color
+	float ndl = dot(hit.normal, -directionalLight.xyz)*directionalLight.w;
+	hit.color *= ndl;
+	// if having no hit then return other color
+	if (hit.distance == ray.maxDistance) hit.color = float3(.1, .1, 0);
+    Result[id.xy] = float4(hit.color,0.0);
+}

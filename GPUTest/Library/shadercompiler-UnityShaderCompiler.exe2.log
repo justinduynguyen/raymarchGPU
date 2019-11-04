@@ -1,0 +1,33 @@
+Base path: C:/Program Files/Unity 2019/Editor/Data
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  api=4 type=1 insize=16611 outsize=902 kw=_SUNDISK_SIMPLE pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at DoSome.compute(16): scalar, vector, or matrix expected
+  api=4 insize=386 outsize=0 ok=0
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(37): undeclared identifier 'p'
+  api=4 insize=1995 outsize=0 ok=0
+Cmd: compileComputeKernel
+  api=4 insize=2023 outsize=1433 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2402 outsize=1245 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2415 outsize=1477 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3716 outsize=1809 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(71): 'sdSphere': no matching 1 parameter function
+  api=4 insize=2386 outsize=0 ok=0
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(56): undeclared identifier 'calNormal'
+  api=4 insize=2501 outsize=0 ok=0
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(95): incorrect number of arguments to numeric-type constructor
+  api=4 insize=2569 outsize=0 ok=0
+Cmd: compileComputeKernel
+  api=4 insize=2492 outsize=2429 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2589 outsize=2457 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2924 outsize=1753 ok=1

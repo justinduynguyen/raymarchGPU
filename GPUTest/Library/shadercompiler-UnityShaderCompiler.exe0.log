@@ -1,0 +1,550 @@
+Base path: C:/Program Files/Unity 2019/Editor/Data
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  api=4 type=0 insize=1582 outsize=690 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1582 outsize=354 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: preprocess
+  insize=3207 outsize=1205 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=2445 outsize=1350 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=2445 outsize=998 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4971 outsize=1138 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4971 outsize=3494 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4971 outsize=1138 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4971 outsize=3494 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1341 outsize=790 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1341 outsize=402 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1341 outsize=790 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1341 outsize=402 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1878 outsize=1082 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1878 outsize=778 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1878 outsize=1082 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1878 outsize=778 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1842 outsize=1082 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1842 outsize=798 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1842 outsize=1082 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1842 outsize=798 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1701 outsize=1094 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1701 outsize=522 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1701 outsize=1094 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1701 outsize=522 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4024 outsize=1242 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4024 outsize=978 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: preprocessCompute
+  insize=421 outsize=420 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=420 outsize=441 ok=1
+Cmd: preprocessCompute
+  insize=387 outsize=386 ok=1
+Cmd: preprocessCompute
+  insize=389 outsize=388 ok=1
+Cmd: preprocessCompute
+  insize=448 outsize=447 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at DoSome.compute(16): RWStructuredBuffer<struct Data> object does not have method 'GetDimesions'
+  api=4 insize=447 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=449 outsize=448 ok=1
+Cmd: preprocessCompute
+  insize=449 outsize=448 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=448 outsize=433 ok=1
+Cmd: preprocessCompute
+  insize=448 outsize=447 ok=1
+Cmd: preprocessCompute
+  insize=449 outsize=448 ok=1
+Cmd: preprocessCompute
+  insize=421 outsize=420 ok=1
+Cmd: preprocessCompute
+  insize=481 outsize=480 ok=1
+Cmd: preprocessCompute
+  insize=483 outsize=482 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=482 outsize=441 ok=1
+Cmd: preprocessCompute
+  insize=1002 outsize=1001 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(15): syntax error: unexpected token 'struct'
+  api=4 insize=1001 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=1004 outsize=1003 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(23): syntax error: unexpected token '('
+  api=4 insize=1003 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=1009 outsize=1008 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(25): invalid subscript 'origin'
+  api=4 insize=1008 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=1012 outsize=1011 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at raymarching.compute(25): implicit truncation of vector type
+  error: 1 plat 4 at raymarching.compute(26): implicit truncation of vector type
+  error: 1 plat 4 at raymarching.compute(27): 'mul': implicit truncation of vector type
+  error: 1 plat 4 at raymarching.compute(27): implicit truncation of vector type
+  error: 2 plat 4 at raymarching.compute(28): invalid subscript 'maxDistance'
+  api=4 insize=1011 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=1012 outsize=1011 ok=1
+Cmd: preprocessCompute
+  insize=1034 outsize=1033 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1033 outsize=441 ok=1
+Cmd: preprocessCompute
+  insize=1229 outsize=1228 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1228 outsize=441 ok=1
+Cmd: preprocessCompute
+  insize=1996 outsize=1995 ok=1
+Cmd: preprocessCompute
+  insize=1994 outsize=1993 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(63): invalid subscript 'position'
+  api=4 insize=1993 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=1995 outsize=1994 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1994 outsize=441 ok=1
+Cmd: preprocessCompute
+  insize=2007 outsize=2006 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(80): syntax error: unexpected float constant
+  api=4 insize=2006 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=2019 outsize=2018 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(80): syntax error: unexpected float constant
+  api=4 insize=2018 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=2020 outsize=2019 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2019 outsize=289 ok=1
+Cmd: preprocessCompute
+  insize=2025 outsize=2024 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2024 outsize=1433 ok=1
+Cmd: preprocessCompute
+  insize=2024 outsize=2023 ok=1
+Cmd: preprocessCompute
+  insize=2040 outsize=2039 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2039 outsize=1477 ok=1
+Cmd: preprocessCompute
+  insize=2310 outsize=2309 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2309 outsize=1393 ok=1
+Cmd: preprocessCompute
+  insize=2365 outsize=2364 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2364 outsize=289 ok=1
+Cmd: preprocessCompute
+  insize=2401 outsize=2400 ok=1
+Cmd: preprocessCompute
+  insize=2403 outsize=2402 ok=1
+Cmd: preprocessCompute
+  insize=2452 outsize=2451 ok=1
+Cmd: preprocessCompute
+  insize=2451 outsize=2450 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2450 outsize=1477 ok=1
+Cmd: preprocessCompute
+  insize=2416 outsize=2415 ok=1
+Cmd: preprocessCompute
+  insize=3057 outsize=3056 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(80): unrecognized identifier 'RayHit'
+  api=4 insize=3056 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=3054 outsize=3053 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3053 outsize=1477 ok=1
+Cmd: preprocessCompute
+  insize=3107 outsize=3106 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3106 outsize=1865 ok=1
+Cmd: preprocessCompute
+  insize=3107 outsize=3106 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3106 outsize=1841 ok=1
+Cmd: preprocessCompute
+  insize=3718 outsize=3717 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(40): undeclared identifier '_CameraToWorld'
+  api=4 insize=3717 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=3717 outsize=3716 ok=1
+Cmd: preprocessCompute
+  insize=3109 outsize=3108 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3108 outsize=1841 ok=1
+Cmd: preprocessCompute
+  insize=3736 outsize=3735 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3735 outsize=1809 ok=1
+Cmd: preprocessCompute
+  insize=3111 outsize=3110 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3110 outsize=1841 ok=1
+Cmd: preprocessCompute
+  insize=3111 outsize=3110 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3110 outsize=1745 ok=1
+Cmd: preprocessCompute
+  insize=3111 outsize=3110 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3110 outsize=1777 ok=1
+Cmd: preprocessCompute
+  insize=3099 outsize=3098 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(27): cannot implicitly convert from 'const float3' to 'float4'
+  api=4 insize=3098 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=3095 outsize=3094 ok=1
+Cmd: preprocessCompute
+  insize=3096 outsize=3095 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3095 outsize=1817 ok=1
+Cmd: preprocessCompute
+  insize=3111 outsize=3110 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(27): cannot implicitly convert from 'const float3' to 'float4'
+  api=4 insize=3110 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=3111 outsize=3110 ok=1
+Cmd: preprocessCompute
+  insize=3111 outsize=3110 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3110 outsize=1413 ok=1
+Cmd: preprocessCompute
+  insize=2032 outsize=2031 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2031 outsize=1413 ok=1
+Cmd: preprocessCompute
+  insize=2379 outsize=2378 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(67): unrecognized identifier 'EPSILON'
+  api=4 insize=2378 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=2387 outsize=2386 ok=1
+Cmd: preprocessCompute
+  insize=2388 outsize=2387 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(71): 'sdSphere': no matching 1 parameter function
+  api=4 insize=2387 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=2373 outsize=2372 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2372 outsize=1413 ok=1
+Cmd: preprocessCompute
+  insize=2400 outsize=2399 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(71): 'sdSphere': no matching 2 parameter function
+  error: 2 plat 4 at raymarching.compute(71): undeclared identifier 'r'
+  api=4 insize=2399 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=2503 outsize=2502 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(56): invalid subscript 'normaml'
+  api=4 insize=2502 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=2502 outsize=2501 ok=1
+Cmd: preprocessCompute
+  insize=2510 outsize=2509 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(95): syntax error: unexpected token ')'
+  api=4 insize=2509 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=2568 outsize=2567 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(95): incorrect number of arguments to numeric-type constructor
+  error: 2 plat 4 at raymarching.compute(95): undeclared identifier 'w'
+  api=4 insize=2567 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=2570 outsize=2569 ok=1
+Cmd: preprocessCompute
+  insize=2569 outsize=2568 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2568 outsize=2425 ok=1
+Cmd: preprocessCompute
+  insize=2568 outsize=2567 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2567 outsize=2425 ok=1
+Cmd: preprocessCompute
+  insize=2567 outsize=2566 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2566 outsize=2425 ok=1
+Cmd: preprocessCompute
+  insize=2568 outsize=2567 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2567 outsize=2429 ok=1
+Cmd: preprocessCompute
+  insize=2556 outsize=2555 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2555 outsize=2429 ok=1
+Cmd: preprocessCompute
+  insize=2523 outsize=2522 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2522 outsize=2429 ok=1
+Cmd: preprocessCompute
+  insize=2493 outsize=2492 ok=1
+Cmd: preprocessCompute
+  insize=2443 outsize=2442 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(48): undeclared identifier 'pos'
+  api=4 insize=2442 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=2446 outsize=2445 ok=1
+Cmd: preprocessCompute
+  insize=2424 outsize=2423 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2423 outsize=2457 ok=1
+Cmd: preprocessCompute
+  insize=2434 outsize=2433 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2433 outsize=2457 ok=1
+Cmd: preprocessCompute
+  insize=2587 outsize=2586 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2586 outsize=2457 ok=1
+Cmd: preprocessCompute
+  insize=2591 outsize=2590 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2590 outsize=2457 ok=1
+Cmd: preprocessCompute
+  insize=2586 outsize=2585 ok=1
+Cmd: preprocessCompute
+  insize=2590 outsize=2589 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2589 outsize=1413 ok=1
+Cmd: preprocessCompute
+  insize=2590 outsize=2589 ok=1
+Cmd: preprocessCompute
+  insize=2594 outsize=2593 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2593 outsize=2457 ok=1
+Cmd: preprocessCompute
+  insize=2780 outsize=2779 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(47): 'min': no matching 0 parameter intrinsic function; Possible intrinsic functions are: min(float|half|double|min10float|min16float|int|uint|min12int|min16int|min16uint, float|half|double|min10float|min16float|int|uint|min12int|min16int|min16uint)
+  error: 2 plat 4 at raymarching.compute(47): syntax error: unexpected token ';'
+  api=4 insize=2779 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=2781 outsize=2780 ok=1
+Cmd: preprocessCompute
+  insize=2782 outsize=2781 ok=1
+Cmd: preprocessCompute
+  insize=2939 outsize=2938 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2938 outsize=4145 ok=1
+Cmd: preprocessCompute
+  insize=2939 outsize=2938 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2938 outsize=4145 ok=1
+Cmd: preprocessCompute
+  insize=2939 outsize=2938 ok=1
+Cmd: preprocessCompute
+  insize=2939 outsize=2938 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at raymarching.compute(71): loop only executes for 0 iteration(s), forcing loop to unroll
+  api=4 insize=2938 outsize=2697 ok=1
+Cmd: preprocessCompute
+  insize=2939 outsize=2938 ok=1
+Cmd: preprocessCompute
+  insize=2950 outsize=2949 ok=1
+Cmd: preprocessCompute
+  insize=2952 outsize=2951 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2951 outsize=2653 ok=1
+Cmd: preprocessCompute
+  insize=2892 outsize=2891 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(53): 'min': no matching 0 parameter intrinsic function; Possible intrinsic functions are: min(float|half|double|min10float|min16float|int|uint|min12int|min16int|min16uint, float|half|double|min10float|min16float|int|uint|min12int|min16int|min16uint)
+  error: 2 plat 4 at raymarching.compute(53): syntax error: unexpected token ';'
+  api=4 insize=2891 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=2893 outsize=2892 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at raymarching.compute(71): loop only executes for 0 iteration(s), forcing loop to unroll
+  api=4 insize=2892 outsize=2697 ok=1
+Cmd: preprocessCompute
+  insize=2895 outsize=2894 ok=1
+Cmd: preprocessCompute
+  insize=2924 outsize=2923 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2923 outsize=1589 ok=1
+Cmd: preprocessCompute
+  insize=2925 outsize=2924 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2924 outsize=1589 ok=1
+Cmd: preprocessCompute
+  insize=2924 outsize=2923 ok=1
+Cmd: preprocessCompute
+  insize=2927 outsize=2926 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2926 outsize=1589 ok=1
+Cmd: preprocessCompute
+  insize=2924 outsize=2923 ok=1
+Cmd: preprocessCompute
+  insize=2925 outsize=2924 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2924 outsize=1589 ok=1
+Cmd: preprocessCompute
+  insize=2927 outsize=2926 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2926 outsize=1589 ok=1
+Cmd: preprocessCompute
+  insize=2929 outsize=2928 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2928 outsize=1589 ok=1
+Cmd: preprocessCompute
+  insize=2926 outsize=2925 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2925 outsize=1589 ok=1
+Cmd: preprocessCompute
+  insize=2924 outsize=2923 ok=1
+Cmd: preprocessCompute
+  insize=2926 outsize=2925 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2925 outsize=1753 ok=1
+Cmd: preprocessCompute
+  insize=2924 outsize=2923 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2923 outsize=1753 ok=1
+Cmd: preprocessCompute
+  insize=2924 outsize=2923 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at raymarching.compute(64): floating point division by zero
+  api=4 insize=2923 outsize=289 ok=1
+Cmd: preprocessCompute
+  insize=2924 outsize=2923 ok=1
+Cmd: preprocessCompute
+  insize=2925 outsize=2924 ok=1
+Cmd: preprocessCompute
+  insize=2924 outsize=2923 ok=1
+Cmd: preprocessCompute
+  insize=2895 outsize=2894 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2894 outsize=3233 ok=1
+Cmd: preprocessCompute
+  insize=2925 outsize=2924 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2924 outsize=4229 ok=1
+Cmd: preprocessCompute
+  insize=3320 outsize=3319 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(37): invalid subscript 'origin'
+  api=4 insize=3319 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=3323 outsize=3322 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(41): invalid subscript 'origin'
+  api=4 insize=3322 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=3326 outsize=3325 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3325 outsize=4229 ok=1
+Cmd: preprocessCompute
+  insize=3362 outsize=3361 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3361 outsize=4401 ok=1
+Cmd: preprocessCompute
+  insize=3329 outsize=3328 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(66): variable 'd' used without having been completely initialized
+  api=4 insize=3328 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=3331 outsize=3330 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(64): variable 'd' used without having been completely initialized
+  api=4 insize=3330 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=3322 outsize=3321 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3321 outsize=4169 ok=1
+Cmd: preprocessCompute
+  insize=3323 outsize=3322 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3322 outsize=4169 ok=1
+Cmd: preprocessCompute
+  insize=3648 outsize=3647 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3647 outsize=4365 ok=1
+Cmd: preprocessCompute
+  insize=3648 outsize=3647 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3647 outsize=4365 ok=1
+Cmd: preprocessCompute
+  insize=3648 outsize=3647 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3647 outsize=4365 ok=1
+Cmd: preprocessCompute
+  insize=3648 outsize=3647 ok=1
+Cmd: preprocessCompute
+  insize=3649 outsize=3648 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3648 outsize=4365 ok=1
+Cmd: preprocessCompute
+  insize=3648 outsize=3647 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3647 outsize=4365 ok=1
+Cmd: preprocessCompute
+  insize=3648 outsize=3647 ok=1
+Cmd: preprocessCompute
+  insize=3648 outsize=3647 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3647 outsize=4365 ok=1
+Cmd: preprocessCompute
+  insize=3697 outsize=3696 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3696 outsize=1289 ok=1
+Cmd: preprocessCompute
+  insize=3648 outsize=3647 ok=1
+Cmd: preprocessCompute
+  insize=3517 outsize=3516 ok=1
+Cmd: compileComputeKernel
+  error: 2 plat 4 at raymarching.compute(64): unrecognized identifier 'q'
+  error: 2 plat 4 at raymarching.compute(64): unrecognized identifier 'vec3'
+  api=4 insize=3516 outsize=0 ok=0
+Cmd: preprocessCompute
+  insize=3520 outsize=3519 ok=1
+Cmd: preprocessCompute
+  insize=3522 outsize=3521 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3521 outsize=6269 ok=1
+Cmd: preprocessCompute
+  insize=3540 outsize=3539 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3539 outsize=6565 ok=1
+Cmd: preprocessCompute
+  insize=3539 outsize=3538 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3538 outsize=6565 ok=1
+Cmd: preprocessCompute
+  insize=3541 outsize=3540 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3540 outsize=6329 ok=1
