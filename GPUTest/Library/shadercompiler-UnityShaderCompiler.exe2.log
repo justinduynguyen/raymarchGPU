@@ -1,125 +1,15 @@
 Base path: C:/Program Files/Unity 2019/Editor/Data
 Cmd: initializeCompiler
-Cmd: compileComputeKernel
-  error: 2 plat 4 at raymarching.compute(266): undeclared identifier 'color'
-  api=4 insize=7375 outsize=0 ok=0
-Cmd: compileComputeKernel
-  error: 2 plat 4 at raymarching.compute(268): syntax error: unexpected token 'else'
-  api=4 insize=7291 outsize=0 ok=0
-Cmd: compileComputeKernel
-  error: 2 plat 4 at raymarching.compute(271): variable 'diffuse' used without having been completely initialized
-  error: 2 plat 4 at raymarching.compute(272): variable 'specular' used without having been completely initialized
-  api=4 insize=7885 outsize=0 ok=0
-Cmd: compileComputeKernel
-  api=4 insize=7991 outsize=7865 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=7990 outsize=7865 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=8674 outsize=7865 ok=1
-Cmd: compileComputeKernel
-  error: 2 plat 4 at raymarching.compute(294): undeclared identifier 'roughnessL'
-  api=4 insize=8855 outsize=0 ok=0
-Cmd: compileComputeKernel
-  api=4 insize=8856 outsize=6969 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=9270 outsize=8281 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=9273 outsize=8281 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=9300 outsize=8281 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=9352 outsize=9577 ok=1
-Cmd: compileComputeKernel
-  error: 2 plat 4 at raymarching.compute(299): undeclared identifier 'roughnessL'
-  api=4 insize=9430 outsize=0 ok=0
-Cmd: compileComputeKernel
-  api=4 insize=9420 outsize=8069 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=9325 outsize=7969 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=9742 outsize=8117 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=9821 outsize=8117 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=9830 outsize=9909 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=9825 outsize=2893 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=9823 outsize=2889 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=9829 outsize=2897 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=9828 outsize=2889 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=9844 outsize=9901 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=9841 outsize=9925 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=9845 outsize=9773 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=9844 outsize=9773 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=9873 outsize=9801 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10243 outsize=10045 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10244 outsize=10045 ok=1
 Cmd: compileSnippet
-  api=4 type=1 insize=1592 outsize=7138 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL SHADOWS_SCREEN LIGHTPROBE_SH pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-Cmd: compileComputeKernel
-  error: 2 plat 4 at raymarching.compute(356): undeclared identifier 'GeometryTerm'
-  api=4 insize=10725 outsize=0 ok=0
-Cmd: compileComputeKernel
-  api=4 insize=10539 outsize=9949 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10598 outsize=10033 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10592 outsize=10005 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10547 outsize=9657 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10538 outsize=9657 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10539 outsize=9705 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10539 outsize=10137 ok=1
-Cmd: compileComputeKernel
-  error: 2 plat 4 at raymarching.compute(353): undeclared identifier 'diffuseColo'
-  api=4 insize=10540 outsize=0 ok=0
-Cmd: compileComputeKernel
-  api=4 insize=10547 outsize=10065 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10590 outsize=8933 ok=1
-Cmd: compileComputeKernel
-  error: 2 plat 4 at raymarching.compute(336): 'pow': no matching 0 parameter intrinsic function; Possible intrinsic functions are: pow(float|half|min10float|min16float, float|half|min10float|min16float)
-  error: 2 plat 4 at raymarching.compute(336): syntax error: unexpected integer constant
-  api=4 insize=10592 outsize=0 ok=0
-Cmd: compileComputeKernel
-  api=4 insize=10589 outsize=10621 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10590 outsize=10673 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10592 outsize=10617 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10527 outsize=10817 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10540 outsize=10357 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10532 outsize=6897 ok=1
-Cmd: compileComputeKernel
-  error: 2 plat 4 at raymarching.compute(134): redefinition of formal parameter 'p'
-  api=4 insize=10461 outsize=0 ok=0
-Cmd: compileComputeKernel
-  api=4 insize=10453 outsize=23729 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10455 outsize=23457 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10449 outsize=4649 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10469 outsize=24305 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10559 outsize=29125 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10564 outsize=29109 ok=1
-Cmd: compileComputeKernel
-  api=4 insize=10587 outsize=29061 ok=1
+  api=4 type=1 insize=1454 outsize=1938 kw=UNITY_PASS_FORWARDADD POINT pd=UNITY_NO_DXT5nm UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_CUBEMAP_ARRAY UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 SHADER_API_DESKTOP UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_DLDR_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1596 outsize=2254 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_COMBINED SHADOWS_SHADOWMASK pd=UNITY_NO_DXT5nm UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_CUBEMAP_ARRAY UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 SHADER_API_DESKTOP UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_DLDR_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1596 outsize=4174 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON SHADOWS_SHADOWMASK pd=UNITY_NO_DXT5nm UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_CUBEMAP_ARRAY UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 SHADER_API_DESKTOP UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_DLDR_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1596 outsize=2166 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTMAP_ON DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON SHADOWS_SHADOWMASK pd=UNITY_NO_DXT5nm UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_CUBEMAP_ARRAY UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 SHADER_API_DESKTOP UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_DLDR_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1596 outsize=3354 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTMAP_ON DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON pd=UNITY_NO_DXT5nm UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_CUBEMAP_ARRAY UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 SHADER_API_DESKTOP UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_DLDR_ENCODING ok=1
+Unhandled exception: Protocol error - unexpected end of data (did the Editor crash?)
+
+Quitting shader compiler process

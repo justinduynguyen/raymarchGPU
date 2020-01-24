@@ -5,7 +5,7 @@ public class Raymarcher : MonoBehaviour
 {
     public ComputeShader raymarching;
     public int threadGroupX, threadGroupY, threadGroupZ;
-    RenderTexture result;
+    public RenderTexture result;
     public Texture enviroment;
     Camera _camera;
     public Material antiAlias;
@@ -35,6 +35,7 @@ public class Raymarcher : MonoBehaviour
             }
             result = new RenderTexture(Screen.width, Screen.height, 0, RenderTextureFormat.ARGBFloat, RenderTextureReadWrite.Linear);
             result.enableRandomWrite = true;
+         
             result.Create();
             _convered = new RenderTexture(Screen.width, Screen.height, 0,
        RenderTextureFormat.ARGBFloat, RenderTextureReadWrite.Linear);
@@ -63,7 +64,7 @@ public class Raymarcher : MonoBehaviour
         raymarching.SetTexture(idkernel,"_rasTexture",source);
       
         raymarching.Dispatch(idkernel, Mathf.CeilToInt(threadGroupX), Mathf.CeilToInt(threadGroupY), 1);
-        Graphics.Blit(result, destination, antiAlias);     
+        Graphics.Blit(result, destination);//, antiAlias);     
           //  Graphics.Blit(_convered, destination);
            
         }

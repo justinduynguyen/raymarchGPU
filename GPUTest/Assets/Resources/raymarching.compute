@@ -1,0 +1,359 @@
+﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+#include "UnityCG.cginc"
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+Texture2D<float4> _rasTexture;
+SamplerState  sampler_rasTexture;
+Texture2D<float4> _depthTexture;
+SamplerState sampler_depthTexture;
+RWTexture2D<float4> Result;
+float4x4 cameraToProjectionInverse;
+float4x4 cameraToWorld;
+
+static const float PI = 3.141592653;
+
+
+float4 directionalLight;
+float3 lightColor;
+Texture2D<float4> _SkyboxTexture;
+SamplerState sampler_SkyboxTexture;
+float roughness;
+static const float MATH_PI= 3.141592653;
+
+struct Ray
+{
+	float3 rayorigin; // gốc tọa độ của tia
+	float3 direction;// hướng của tia
+	float maxDistance;// khoảng cách xa nhất cho phép tracing.
+};
+struct Hit
+{
+	float3 position;
+	float4 color;
+	float3 normal;
+	float distance;
+};
+
+
+Ray CreateCameraRay(float2 uv)
+{
+	Ray ray;
+	ray.rayorigin = mul(cameraToWorld, float4(0, 0, 1, 1)).xyz;
+	float3 direction = mul(cameraToProjectionInverse, float4(uv.x, uv.y, .5, 1)).xyz;
+	//direction.xy /= abs(direction.z);
+	ray.direction = normalize(mul(cameraToWorld, float4(direction, 0.0)).xyz);
+	ray.maxDistance = 5000;
+	return ray;
+}
+void IntersectGroundPlane(Ray ray, inout Hit bestHit)
+{
+	// Calculate distance along the ray where the ground plane is intersected
+	float t = -ray.rayorigin.y / ray.direction.y;
+	if (t > 0 && t < bestHit.distance)
+	{
+		bestHit.distance = t;
+		bestHit.position = ray.rayorigin + t * ray.direction;
+		bestHit.normal = float3(0.0f, 1.0f, 0.0f);
+		bestHit.color = float4(0.3, 0.3, 0.3, 1.0f);
+
+	}
+}
+float sphere(float3 pos)
+{
+	return length(pos) - 1.0;
+}
+
+float box(float3 pos)
+{
+	float3 d = abs(pos) - 1.0;
+	return min(max(d.x, max(d.y, d.z)), 0.0) + length(max(d, 0.0));
+}
+
+float torus(float3 pos)
+{
+	float2 q = float2(length(pos.xz) - 2.0, pos.y);
+	return length(q) - 0.5;
+}
+
+float blob7(float d1, float d2, float d3, float d4, float d5, float d6, float d7)
+{
+	float k = 2.0;
+	return -log(exp(-k * d1) + exp(-k * d2) + exp(-k * d3) + exp(-k * d4) + exp(-k * d5) + exp(-k * d6) + exp(-k * d7)) / k;
+}
+
+
+
+float sdSphere(float3 p, float r)
+{
+	return length(p) - r;
+}
+float sdTorus(float3 p, float2 t)
+{
+	float2 q = float2(length(p.xz) - t.x, p.y);
+	return length(q) - t.y;
+}
+float sdPlane(float3 p, float4 n)
+{
+	// n must be normalized
+	return dot(p, n.xyz) + n.w;
+}
+float sdRoundBox(float3 p, float3 b, float r)
+{
+	float3 q = abs(p) - b;
+	return length(max(q, 0.0)) + min(max(q.x, max(q.y, q.z)), 0.0) - r;
+}
+//float LinearEyeDepth(float rawdepth)
+//{
+//	float x, y, z, w;
+//#if SHADER_API_GLES3 // insted of UNITY_REVERSED_Z
+//	x = -1.0 + _NearClip / FarClip;
+//	y = 1;
+//	z = x / _NearClip;
+//	w = 1 / _NearClip;
+//#else
+//	x = 1.0 - _NearClip / FarClip;
+//	y = _NearClip / _FarClip;
+//	z = x / _NearClip;
+//	w = y / _NearClip;
+//#endif
+//
+//	return 1.0 / (z * rawdepth + w);
+//}
+float map(float3 pos)
+{
+	float d = sdSphere(pos, .5);
+	 d = min(d, sdTorus(pos + float3(10, 0, 0), float2(3, 1)));
+	 d = min(d, sdRoundBox(pos+float3(-10, 0, 0), float3(3,3,3),2.0f));
+	
+	float t = _Time;
+
+	float p = torus(pos + float3(0.0, 3.0, 0.0));
+	float b = sphere(0.5*(pos + float3(cos(t*0.5), sin(t*0.3), 0.0)));
+	float s1 = box(2.0*(pos + 3.0 * float3(cos(t*1.1), cos(t*1.3), cos(t*1.7)))) / 2.0;
+	float s2 = box(2.0*(pos + 3.0 * float3(cos(t*0.7), cos(t*1.9), cos(t*2.3)))) / 2.0;
+	float s3 = box(2.0*(pos + 3.0 * float3(cos(t*0.3), cos(t*2.9), sin(t*1.1)))) / 2.0;
+	float s4 = box(2.0*(pos + 3.0 * float3(sin(t*1.3), sin(t*1.7), sin(t*0.7)))) / 2.0;
+	float s5 = box(2.0*(pos + 3.0 * float3(sin(t*2.3), sin(t*1.9), sin(t*2.9)))) / 2.0;
+
+	return  min(d, blob7(p, b, s1, s2, s3, s4, s5));
+}
+
+
+float3 calNormal(float3 pos)
+{
+	const float2 eps = float2(0.001f, 0.0f);
+	float3 nor = float3(
+		map(pos + eps.xyy) - map(pos - eps.xyy),
+		map(pos + eps.yxy) - map(pos - eps.yxy),
+		map(pos + eps.yyx) - map(pos - eps.yyx));
+	return normalize(nor);
+}
+void raymarch(Ray ray, inout Hit hit,float depthDistance)
+{
+	
+	const int maxstep = 64;
+	float t = 0; // current distance traveled along ray
+	for (int i = 0; i < maxstep; ++i) {
+
+
+		if (t >= depthDistance)
+		{
+			break;
+		}
+		float3 p = ray.rayorigin + ray.direction * t; // World space position of sample
+		float d = map(p);
+		if (d < 0.001f	) {
+
+			hit.distance = t;			
+			hit.position = p;
+			hit.normal = calNormal(p);			
+			float smoothness = 1;
+			hit.color = float4(1, 1, 1, 1);
+			break;
+		}
+		t += d;
+	}
+
+}
+Hit CreateHit()
+{
+	Hit hit;
+	hit.color = float4(0, 0, 0, 0);
+	hit.distance = 5000;
+	hit.position = float3(0, 0, 0);
+	return hit;
+}
+//float LinearEyeDepth(float rawdepth)
+//{
+//	float x, y, z, w;
+//#if SHADER_API_GLES3 // insted of UNITY_REVERSED_Z
+//	x = -1.0 + _NearClip / FarClip;
+//	y = 1;
+//	z = x / _NearClip;
+//	w = 1 / _NearClip;
+//#else
+//	x = 1.0 - _NearClip / FarClip;
+//	y = _NearClip / _FarClip;
+//	z = x / _NearClip;
+//	w = y / _NearClip;
+//#endif
+//
+//	return 1.0 / (z * rawdepth + w);
+//}
+float chiGGX(float v)
+{
+	return v > 0 ? 1 : 0;
+}
+
+float Distribution(float3 n, float3 h, float alpha)
+{
+	float NoH = dot(n, h);
+	float alpha2 = alpha * alpha;
+	float NoH2 = NoH * NoH;
+	float den = NoH2 * alpha2 + (1 - NoH2);
+	return (chiGGX(NoH) * alpha2) / (PI * den * den);
+}
+float GeometryTerm(float3 v, float3 n, float3 h, float alpha)
+{
+	float VoH2 = saturate(dot(v, h));
+	float chi = chiGGX(VoH2 / saturate(dot(v, n)));
+	VoH2 = VoH2 * VoH2;
+	float tan2 = (1 - VoH2) / VoH2;
+	return (chi * 2) / (1 + sqrt(1 + alpha * alpha * tan2));
+}
+
+
+float3 Env(float3 direction,float level)
+{
+	float theta = -acos(direction.y) / PI;
+	float phi = atan2(direction.x, direction.z) / -(PI * 2);
+    return _SkyboxTexture.SampleLevel(sampler_SkyboxTexture, float2(phi, theta), level).xyz;
+}
+float3 FresnelTerm(float3 specularColor, float vdoth)
+{
+	float3 fresnel = specularColor + (1. - specularColor) * pow((1. - vdoth), 5.);
+	return fresnel;
+}
+float3 FresnelCondutor(float3 n, float3 h)
+{
+	float index=10;
+	float abs = 0.01;
+	float ndh = saturate(dot(n, h));
+	float numerator = (index - 1)*(index - 1) + 4 * index*pow(1 - ndh, 5) + abs * abs;
+	float denomirator = (index + 1)*(index + 1) + abs * abs;
+	float rs = numerator / denomirator;
+	return float3(rs, rs, rs);
+}
+float3 EnvBRDFApprox(float3 specularColor, float roughness, float ndotv)
+{
+	const float4 c0 = float4(-1, -0.0275, -0.572, 0.022);
+	const float4 c1 = float4(1, 0.0425, 1.04, -0.04);
+	float4 r = roughness * c0 + c1;
+	float a004 = min(r.x * r.x, exp2(-9.28 * ndotv)) * r.x + r.y;
+	float2 AB = float2(-1.04, 1.04) * a004 + r.zw;
+	return specularColor * AB.x + AB.y;
+}
+struct SHCoefficients
+{
+	float3 l00, l1m1, l10, l11, l2m2, l2m1, l20, l21, l22;
+	void GetCoeDif(float3 a,float3 b ,float3 c,float3 d,float3 e,float3 g,float3 h ,float3 f,float3 k)
+	{
+		l00 = a;l1m1 = b;l10 = c;l11 = d;l2m2 = e;l2m1 = g;l20 = h;l21 = f;l22 = k;
+
+	}
+};
+SHCoefficients SH_STPETER;
+float3 SHIrradiance(float3 nrm)
+{
+	SH_STPETER.GetCoeDif(
+		float3(0.3623915, 0.2624130, 0.2326261),
+		float3(0.1759131, 0.1436266, 0.1260569),
+		float3(-0.0247311, -0.0101254, -0.0010745),
+		float3(0.0346500, 0.0223184, 0.0101350),
+		float3(0.0198140, 0.0144073, 0.0043987),
+		float3(-0.0469596, -0.0254485, -0.0117786),
+		float3(-0.0898667, -0.0760911, -0.0740964),
+		float3(0.0050194, 0.0038841, 0.0001374),
+		float3(-0.0818750, -0.0321501, 0.0033399)
+	);
+	const SHCoefficients c = SH_STPETER;
+	const float c1 = 0.429043;
+	const float c2 = 0.511664;
+	const float c3 = 0.743125;
+	const float c4 = 0.886227;
+	const float c5 = 0.247708;
+	return (
+		c1 * c.l22 * (nrm.x * nrm.x - nrm.y * nrm.y) +
+		c3 * c.l20 * nrm.z * nrm.z +
+		c4 * c.l00 -
+		c5 * c.l20 +
+		2.0 * c1 * c.l2m2 * nrm.x * nrm.y +
+		2.0 * c1 * c.l21  * nrm.x * nrm.z +
+		2.0 * c1 * c.l2m1 * nrm.y * nrm.z +
+		2.0 * c2 * c.l11  * nrm.x +
+		2.0 * c2 * c.l1m1 * nrm.y +
+		2.0 * c2 * c.l10  * nrm.z
+		);
+}
+[numthreads(8, 8, 1)]
+void CSMain(uint3 id : SV_DispatchThreadID)
+{
+	// TODO: insert actual code here!
+	uint width, height;
+	Result.GetDimensions(width, height);
+	// convert to range[-1,1]
+	float2 uv = float2((id.xy) / float2(width, height) * 2.0f - 1.0f);
+
+	
+
+	float4 depth = _depthTexture.SampleLevel(sampler_depthTexture, id.xy / float2(width, height), 0);
+
+	// create  a new ray
+	Ray ray = CreateCameraRay(uv);
+	
+	// create hit
+	Hit hit = CreateHit();
+	
+//	IntersectGroundPlane(ray, hit);
+	// do raymarching
+	float3 direction = ray.direction;
+	float depthDistance = LinearEyeDepth(depth.x);// *length(direction);
+
+	raymarch(ray, hit,depthDistance);
+
+	float3 diffuse = float3(0, 0, 0);
+	float3 specular =float3(0,0,0);
+
+	float3 specularColor = float3(1, 1,0);
+	float3 diffuseColor = float3(.02,.02,.02);
+	float3 viewDir =-ray.direction;
+	float3 normal = hit.normal;
+	float3 reflectDir = reflect(ray.direction, hit.normal);
+	
+	float3 lightDir = -directionalLight.xyz;
+	float3 halfDir = normalize(viewDir + lightDir);
+	float vdoth = saturate(dot(viewDir, halfDir));
+	float ndoth = saturate(dot( normal, halfDir));
+	float ndotv = saturate(dot(normal, viewDir));
+	float ndotl = saturate(dot(normal, lightDir));
+	
+	diffuse += diffuseColor * lightColor * saturate(dot(normal, lightDir))/PI;
+	float g = GeometryTerm(viewDir, normal, halfDir, roughness*roughness);
+	float d = Distribution(halfDir, normal, roughness*roughness);
+	float3 f = FresnelCondutor(hit.normal, halfDir);// FresnelTerm(specularColor, saturate(dot(viewDir, halfDir)));
+	specular += specularColor * lightColor* f * d * g *ndotl;
+    float denominator = saturate(4 * (saturate(dot(normal,viewDir)) * saturate(dot(halfDir, normal)) + 0.05));
+	specular /= denominator;
+	float3 directLight = hit.color.w*(diffuse + specular);
+	//indirect light
+	float3 envirColor= EnvBRDFApprox(specularColor, roughness*roughness, ndotv);
+	float3 indirectLightSpe = Env(reflectDir,lerp(1,9, saturate((roughness - 0.25) / 0.75)))*envirColor;
+	float3  indirectLightDif = diffuseColor*SHIrradiance(hit.normal);
+	float3 color = directLight+ indirectLightSpe + indirectLightDif;
+	float4 finalColor = float4(color,1);
+
+	float4 col = _rasTexture.SampleLevel(sampler_rasTexture, id.xy / float2(width, height), 0);
+    if(hit.color.w==0)Result[id.xy] = col;
+	else Result[id.xy] = finalColor;
+}
